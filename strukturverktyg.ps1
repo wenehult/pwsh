@@ -18,7 +18,7 @@ function SkapaStruktur {
 
         # Kontrollera om huvudmappen redan finns
         if (Test-Path $huvudmapp) {
-            throw "Det kan du glömma den mappen finns redan."
+            throw "Mappen '$Namn' finns redan."
         }
 
         # Skapa huvudmappen
@@ -56,4 +56,3 @@ $namn = Read-Host "Skriv namn på kundsystem eller miljö"
 
 # Kör funktionen
 SkapaStruktur -Namn $namn
-
