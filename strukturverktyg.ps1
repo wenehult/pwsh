@@ -1,4 +1,4 @@
-# strukturverktyg.ps1
+# Detta är strukturverktyg.ps1 som är ett PowerShell-skript för inlämninig 1
 # Detta skript skapar en mappstruktur med logs, scripts och temp.
 # Det skapar även en loggfil med dagens datum.
 
@@ -8,7 +8,7 @@ function SkapaStruktur {
     )
 
     try {
-        # Kontrollera om användaren skrev något
+        # Kontrollerar om användaren skrev något
         if ([string]::IsNullOrWhiteSpace($Namn)) {
             throw "Du måste skriva ett namn."
         }
@@ -18,21 +18,21 @@ function SkapaStruktur {
 
         # Kontrollera om huvudmappen redan finns
         if (Test-Path $huvudmapp) {
-            throw "Mappen '$Namn' finns redan."
+            throw "Det kan du glömma! Mappen '$Namn' finns redan."
         }
 
-        # Skapa huvudmappen
-        New-Item -Path $huvudmapp -ItemType Directory | Out-Null
+        # Skapar huvudmappen
+        New-Item -Path $huvudmapp -ItemType Directory
 
-        # Skapa undermappar
-        New-Item -Path "$huvudmapp\logs" -ItemType Directory | Out-Null
-        New-Item -Path "$huvudmapp\scripts" -ItemType Directory | Out-Null
-        New-Item -Path "$huvudmapp\temp" -ItemType Directory | Out-Null
+        # Skapar undermapparna
+        New-Item -Path "$huvudmapp\logs" -ItemType Directory
+        New-Item -Path "$huvudmapp\scripts" -ItemType Directory
+        New-Item -Path "$huvudmapp\temp" -ItemType Directory 
 
-        # Skapa datum för loggfilens namn
+        #  Kollar datum för loggfilens namn
         $datum = Get-Date -Format "yyyy-MM-dd"
 
-        # Skapa datum och tid för loggens innehåll
+        # Tittar pådatum och tid för loggens innehåll
         $datumTid = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
         # Sökväg till loggfilen
@@ -41,7 +41,7 @@ function SkapaStruktur {
         # Skriv text till loggfilen
         "Struktur skapad: $datumTid" | Out-File -FilePath $loggfil -Encoding UTF8
 
-        Write-Host "Strukturen skapades utan problem." -ForegroundColor Green
+        Write-Host "Strukturen skapades utan problem." -ForegroundColor Blue
         Write-Host "Huvudmapp: $huvudmapp"
         Write-Host "Loggfil: $loggfil"
     }
