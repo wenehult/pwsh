@@ -4,14 +4,11 @@
 
 function SkapaStruktur {
     param (
+        [ValidateNotNullOrEmpty()]
         [string]$Namn
     )
-
     try {
-        # Kontrollerar om användaren skrev något
-        if ([string]::IsNullOrWhiteSpace($Namn)) {
-            throw "Du måste skriva ett namn."
-        }
+        
 
         # Sökväg till huvudmappen
         $huvudmapp = ".\$Namn"
@@ -32,7 +29,7 @@ function SkapaStruktur {
         #  Kollar datum för loggfilens namn
         $datum = Get-Date -Format "yyyy-MM-dd"
 
-        # Tittar pådatum och tid för loggens innehåll
+        # Tittar på datum och tid för loggens innehåll
         $datumTid = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
         # Sökväg till loggfilen
