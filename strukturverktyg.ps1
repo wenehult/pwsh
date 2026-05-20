@@ -1,9 +1,8 @@
 # Detta är strukturverktyg.ps1 som är ett PowerShell-skript för inlämninig 1
-# Detta skript skapar en mappstruktur med logs, scripts och temp.
-# Det skapar även en loggfil med dagens datum.
-
+# här är början på functionen som kommer vara det som skapar alla mapparna 
 function SkapaStruktur {
     param (
+
         [ValidateNotNullOrEmpty()]
         [string]$Namn
     )
