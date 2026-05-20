@@ -11,7 +11,7 @@ Undermapparna
 - scripts
 - temp
 
-I mappen `ogs skapas även en loggfil med dagens datum. Loggfilen innehåller även information om när den skapades.
+I mappen logs skapas även en loggfil med dagens datum. Loggfilen innehåller även information om när den skapades.
 
 
 ## Hur man kör skriptet
@@ -20,8 +20,8 @@ I mappen `ogs skapas även en loggfil med dagens datum. Loggfilen innehåller ä
 2. Gå till mappen där skriptet finns.
 3. Kör .ps1 filen genom att skriva in hela namnet och tryck enter.
 
-Alternativ kör man den genom vs code genom att gå in i filen och trycka play.
+Alternativ kör man den i vs code genom att gå in i filen och trycka play.
 
 ## Lärdommar 
 Kul uppgift som kändes väldigt givande för att få en grund i scripting. 
-Jag Tycker det är lätt att förstå koden man skriver. Som den är skriven just nu tycker jag att den förklarar sig själv ganska mycket även om man inte har kommentarerna i koden. Det jag dock tycker är svårare är att känna till alla olika delar av koden man ska skriva när man börjar från en blank sida. 
+Jag Tycker det är lätt att förstå koden och som den är skriven just nu tycker jag att den förklarar sig själv ganska mycket även om man inte har kommentarerna i koden. Det jag dock tycker är svårare är att känna till alla olika delar av koden man ska skriva när man börjar från en blank sida. Detta tror jag kommer bli bättre och lättare längs med kursen. 
